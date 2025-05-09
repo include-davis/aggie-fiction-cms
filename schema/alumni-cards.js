@@ -6,7 +6,7 @@ const alumniCards = new ContentType({
   pluralDisplayName: 'Alumni Cards',
 });
 
-members
+alumniCards
   .createField({
     name: 'image',
     displayName: 'Image',
@@ -62,4 +62,4 @@ members
     required: false,
   });
 
-module.exports = members;
+module.exports = alumniCards;
