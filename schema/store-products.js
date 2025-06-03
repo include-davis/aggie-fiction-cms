@@ -1,9 +1,9 @@
 const { ContentType, FieldType } = require('@include/hearth');
 
 const alumniCards = new ContentType({
-  name: 'alumni-cards',
-  singularDisplayName: 'Alumni Card',
-  pluralDisplayName: 'Alumni Cards',
+  name: 'store-products',
+  singularDisplayName: 'Store Product',
+  pluralDisplayName: 'Store Products',
 });
 
 alumniCards
@@ -58,12 +58,6 @@ alumniCards
   .createField({
     name: 'linkedin_username',
     displayName: 'LinkedIn Username (Optional)',
-    type: FieldType.SHORT_TEXT,
-    required: false,
-  })
-  .createField({
-    name: 'linkedin_url',
-    displayName: 'LinkedIn URL (Optional)',
     type: FieldType.SHORT_TEXT,
     required: false,
   });
