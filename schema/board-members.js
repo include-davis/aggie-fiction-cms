@@ -35,7 +35,7 @@ boardMembers
     name: 'majors',
     displayName: 'Major(s) (separate with commas)',
     type: FieldType.SHORT_TEXT,
-    required: false,
+    required: true,
   })
   .createField({
     name: 'minors',
@@ -47,7 +47,7 @@ boardMembers
     name: 'grade',
     displayName: 'Grade',
     type: FieldType.SHORT_TEXT,
-    required: false,
+    required: true,
   });
 
 module.exports = boardMembers;
