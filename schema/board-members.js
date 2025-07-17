@@ -1,12 +1,12 @@
 const { ContentType, FieldType } = require('@include/hearth');
 
-const storeProducts = new ContentType({
-  name: 'store-products',
-  singularDisplayName: 'Store Product',
-  pluralDisplayName: 'Store Products',
+const boardMembers = new ContentType({
+  name: 'board-members',
+  singularDisplayName: 'Board Member',
+  pluralDisplayName: 'Board Members',
 });
 
-storeProducts
+boardMembers
   .createField({
     name: 'image',
     displayName: 'Image',
@@ -26,28 +26,28 @@ storeProducts
     required: true,
   })
   .createField({
-    name: 'price',
-    displayName: 'Price',
+    name: 'position',
+    displayName: 'Position',
     type: FieldType.SHORT_TEXT,
     required: true,
   })
   .createField({
-    name: 'description',
-    displayName: 'Description',
-    type: FieldType.LONG_TEXT,
-    required: true,
-  })
-  .createField({
-    name: 'categories',
-    displayName: 'Categories, separated by commas',
+    name: 'majors',
+    displayName: 'Major(s) (separate with commas)',
     type: FieldType.SHORT_TEXT,
     required: false,
   })
   .createField({
-    name: 'similar_item_ids',
-    displayName: 'IDs of similar items (up to 3), separated by commas',
+    name: 'minors',
+    displayName: 'Minor(s) (separate with commas) (optional)',
+    type: FieldType.SHORT_TEXT,
+    required: false,
+  })
+  .createField({
+    name: 'grade',
+    displayName: 'Grade',
     type: FieldType.SHORT_TEXT,
     required: false,
   });
 
-module.exports = storeProducts;
+module.exports = boardMembers;
